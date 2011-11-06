@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Earth Quakes</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <link href="/stylesheets/QuakeMap.css" rel="stylesheet"/>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="http://yui.yahooapis.com/3.4.1/build/yui/yui-min.js"></script>
+    <script type="text/javascript" src="http://tryhandlebarsjs.com/js/libs/handlebars-1.0.0.beta.2.js"></script>
+    <script type="text/javascript" src="/js/QuakeMap.js"></script>
+  </head>
+  <body>
+  <div id="info-window-template" class="handlebar-template">
+    <div class="quake-info-window">
+        <div class="qiw-location">
+        {% templatetag openbrace %}{% templatetag openbrace %}region{% templatetag closebrace %}{% templatetag closebrace %}
+        </div>
+        <div class="qiw-magnitude>
+            <span class="qiw-magnitude-value">Magnitude: {% templatetag openbrace %}{% templatetag openbrace %}magnitude{% templatetag closebrace %}{% templatetag closebrace %}</span>
+        </div>
+        <div class="qiw-depth">
+            <span class="qiw-magnitude-date">Recorded {% templatetag openbrace %}{% templatetag openbrace %}date{% templatetag closebrace %}{% templatetag closebrace %}</span>
+        </div>
+    </div>
+  </div>
+  
+  <div id="left_panel">
+    <ul id="list_view">
+		<li>EarthQuake1</li>
+		<li>EarthQuake1</li>
+		<li>EarthQuake1</li>
+		<li>EarthQuake1</li>
+    </ul>
+  </div>
+  <div id="map_canvas"></div>
+  </body>
+</html>

@@ -19,15 +19,11 @@ from google.appengine.ext.webapp import util
 from tasks.fetchquakedata import FetchQuakeDataHandler
 from tasks.deleteallquakes import bulkdelete
 from webservice.getearthquakes import GetEarthQuakes
-
-class MainHandler(webapp.RequestHandler):
-    def get(self):
-        self.response.out.write('Hello world!')
-
+from pages.quakemappage import QuakeMapPageHandler
 
 def main():
     application = webapp.WSGIApplication([
-        ('/', MainHandler), 
+        ('/', QuakeMapPageHandler), 
         ('/tasks/fetchquakedata', FetchQuakeDataHandler),
         ('/getQuakes', GetEarthQuakes),
         ('/tasks/deletequakes', bulkdelete)
