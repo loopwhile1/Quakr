@@ -1,0 +1,4 @@
+cron:
+- description: daily fetch job
+  url: /tasks/fetchquakedata?job=daily
+  schedule: every 24 hours

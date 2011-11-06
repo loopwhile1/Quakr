@@ -1,0 +1,17 @@
+html, body, #map_canvas {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#left_panel {
+    width:20em;
+    float:left;
+}
+
+.handlebar-template {
+	visibility:hidden;
+	float:left;
+	width:0;
+	height:0;
+}
